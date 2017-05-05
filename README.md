@@ -3,6 +3,7 @@ SQL utilities for Java, supporting both, Oracle and MySQL backends
 
 # Importing as library
 Obviously, you'll have to import this library into your IDE
+
 **JAR download link coming soon**
 
 ## Eclipse
