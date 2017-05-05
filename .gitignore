@@ -1,0 +1,32 @@
+﻿
+src/com/timic/sqlutils/Test.java
+src/com/timic/sqlutils/Main.java
+
+# Eclipse-specific gitignore
+
+*target*
+*.jar
+*.war
+*.ear
+*.class
+
+*.pydevproject
+.project
+.metadata
+bin/**
+tmp/**
+tmp/**/*
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+.classpath
+.settings/
+.loadpath
+
+# External tool builders
+.externalToolBuilders/
+
+# Locally stored "Eclipse launch configurations"
+*.launch
