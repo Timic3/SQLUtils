@@ -3,6 +3,7 @@ SQL utilities for Java, supporting both, Oracle and MySQL backends
 
 # Importing as library
 Obviously, you'll have to import this library into your IDE
+
 **I cannot provide download link to this library due to license restrictions**
 
 ## Eclipse
@@ -20,6 +21,7 @@ I'll write more detailed documentation later. For now, here are some examples:
 **MySQL/Oracle instance**
 ```java
 // Initiate it only once, unless you need to connect to more databases
+// MySQL/Oracle(String host, [ int port, ] String database, String username, String password);
 MySQL cMySQL = new MySQL("localhost", "rp", "root", "");
 // To specify a port (default 3306 on MySQL), use:
 MySQL cMySQL = new MySQL("localhost", 3306, "rp", "root", "");
@@ -40,14 +42,14 @@ connection.close();
 
 // To fetch data from table, use connection.query(query);
 // DO NOT USE IT FOR UPDATING ROWS OR SUCH! ONLY USE IT FOR FETCHING DATA!
-ResultSet result = connection.query("SELECT * FROM something");
+ResultSet result = connection.query("SELECT * FROM table");
 // You can loop through it:
 while(result.next()) {
 	System.out.println(result.getString("row_name"));
 }
 
 // To update a row in the table or something:
-connection.update("UPDATE something SET other='hello' WHERE world='bye'");
+connection.update("UPDATE table SET row='something' WHERE row='something_else'");
 ```
 
 **Full example**
@@ -68,13 +70,13 @@ public class Test {
 			e.printStackTrace();
 		}
 		
-		Oracle cOracle = new Oracle("127.0.0.1", "pdbers", "tm", "");
+		Oracle cOracle = new Oracle("127.0.0.1", "pdbers", "root", "");
 		try {
 			cOracle.open();
-			cOracle.update("UPDATE avto SET znamka='Audi2' WHERE znamka='Audi'");
-			ResultSet result = cOracle.query("SELECT * FROM avto");
+			cOracle.update("UPDATE accounts SET account_name='hello' WHERE account_name='world'");
+			ResultSet result = cOracle.query("SELECT * FROM accounts");
 			while(result.next()) {
-				System.out.println(result.getString("znamka"));
+				System.out.println(result.getString("account_name"));
 			}
 			cOracle.close();
 		} catch(Exception e) {
