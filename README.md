@@ -18,6 +18,24 @@ Obviously, you'll have to import this library into your IDE
 # Documentation
 I'll write more detailed documentation later. For now, here are some examples:
 
+**Syntax**
+```java
+// Initiate
+MySQL/Oracle(String host, [ int port = 3306, ] String database, String username, String password);
+
+// Connect to database
+connection.open();
+
+// Disconnect from database
+connection.close();
+
+// Execute/update
+connection.update(String query);
+
+// Query (returns ResultSet)
+connection.query(String query);
+```
+
 **MySQL/Oracle instance**
 ```java
 // Initiate it only once, unless you need to connect to more databases
