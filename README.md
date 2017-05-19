@@ -13,7 +13,11 @@ Obviously, you'll have to import this library into your IDE
 - Click on 'Add External JARs...'
 - Add JAR there, then press 'Apply' and/or 'Ok'
 
-## More IDEs later
+## NetBeans
+- Go to File > Project Properties
+- Click 'Libraries' tab
+- Click on 'Add JAR/Folder'
+- Add JAR there, then press 'Ok'
 
 # Documentation
 I'll write more detailed documentation later. For now, here are some examples:
